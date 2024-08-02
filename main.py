@@ -1,4 +1,5 @@
 import concurrent
+import logging
 
 import requests
 
@@ -9,10 +10,12 @@ def get_packages(url: str) -> list:
         response = requests.get(url, timeout=10)
         response.raise_for_status()  # Проверка на ошибки HTTP
     except requests.RequestException as e:
+        logging.error(f'Ошибка при запросе к серверу: {e}')
         raise ValueError(f'Ошибка при запросе к серверу: {e}')
 
     packages = response.json().get('packages')
     if packages is None:
+        logging.error('Проверьте название ветки или формат ответа API.')
         raise ValueError('Проверьте название ветки или формат ответа API.')
 
     return packages
