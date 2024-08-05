@@ -17,7 +17,7 @@ Follow these steps to set up the tool on a Linux system:
 **1. Clone the repository:**
 ```bash
 git clone https://github.com/romatimon/test_bz.git
-cd test_bz/package_comparator
+cd test_bz
 ```
 **2. Update package lists:**
 
