@@ -43,7 +43,7 @@ def compare_packages(branch1_packages: list, branch2_packages: list) -> dict:
                     'name': name,
                     'version': branch1_pkg['version'],
                     'release': branch1_pkg['release'],
-                    'arch': branch1_pkg['arch']
+                    'arch': branch1_pkg['arch'],
                 }
 
     return {

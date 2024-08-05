@@ -1,6 +1,7 @@
 import concurrent.futures
+import json
+
 import click
-from tabulate import tabulate
 from tqdm import tqdm
 from comparator import get_packages, compare_packages
 
@@ -25,16 +26,7 @@ def main(branch1: str, branch2: str) -> None:
 
         result = compare_packages(branch1_packages, branch2_packages)
 
-        # Display results
-        click.echo("Packages only in branch p10:")
-        click.echo(tabulate(result['only_in_branch2'].values(), headers='keys'))
-
-        click.echo("\nPackages only in branch sisyphus:")
-        click.echo(tabulate(result['only_in_branch1'].values(), headers='keys'))
-
-        click.echo("\nPackages with higher version in sisyphus:")
-        click.echo(tabulate(result['higher_in_branch1'].values(), headers='keys'))
-
+        print(json.dumps(result, indent=4, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
