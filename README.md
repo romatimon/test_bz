@@ -51,8 +51,8 @@ python package_comparison.py sisyphus p10
 ```
 
 ## Output
-The results will be saved to the specified JSON file and displayed in the terminal. The output includes:
+The results will be converted to the terminal. The output includes:
 
 - Packages only in branch 1.
 - Packages only in branch 2.
-- Packages with a higher version in branch 1. .
+- Packages with a higher version in branch 1.
