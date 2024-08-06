@@ -36,6 +36,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+
 To use the package comparison tool, run the following command in your terminal:
 ```bash
 python cli.py <branch1> <branch2>
