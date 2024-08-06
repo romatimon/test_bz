@@ -43,7 +43,7 @@ sudo apt install python3-rpm
 To use the package comparison tool, go to the `package_comparator` folder and run the following command in a terminal:
 ```bash
 cd package_comparator
-python cli.py <branch1> <branch2>
+python3 cli.py <branch1> <branch2>
 ```
 
 - `<branch1>`: The first branch to compare.
@@ -52,7 +52,7 @@ python cli.py <branch1> <branch2>
 ## Example
 
 ```bash
-python cli.py sisyphus p10
+python3 cli.py sisyphus p10
 ```
 
 ## Output
