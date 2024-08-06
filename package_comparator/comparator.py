@@ -14,7 +14,6 @@ def get_packages(url: str) -> list:
 
     return packages
 
-
 def parse_version(version):
     """Parses a version string and returns a tuple for comparison."""
     version = version.replace('_', '-')  #  1.26.0_alt1 convert to 1.26.0-alt1
@@ -55,7 +54,6 @@ def compare_versions(pkg1, pkg2):
                 return -1
 
     return (release1 > release2) - (release1 < release2)  # bool
-
 
 def compare_packages(branch1_packages: list, branch2_packages: list) -> dict:
     """Compare packages between two branches and return the results."""
