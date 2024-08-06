@@ -1,6 +1,4 @@
 import requests
-import rpm
-
 
 def get_packages(url: str) -> list:
     """Fetch packages from the specified URL."""
