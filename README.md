@@ -33,11 +33,6 @@ sudo apt install python3-pip
 pip install -r requirements.txt
 ```
 
-**5. Install RPM Python bindings:**
-```bash
-sudo apt install python3-rpm
-```
-
 ## Usage
 
 To use the package comparison tool, go to the `package_comparator` folder and run the following command in a terminal:
