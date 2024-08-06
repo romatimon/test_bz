@@ -16,16 +16,14 @@ Follow these steps to set up the tool on a Linux system:
 **1. Clone the repository:**
 ```bash
 git clone https://github.com/romatimon/test_bz.git
-cd test_bz/package_comparator
+cd test_bz
 ```
 **2. Update package lists:**
-
 ```bash
 sudo apt update
 ```
 
 **3. Install Python 3 and pip (if not already installed):**
-
 ```bash
 sudo apt install python3-pip
 ```
@@ -35,10 +33,16 @@ sudo apt install python3-pip
 pip install -r requirements.txt
 ```
 
+**5. Install RPM Python bindings:**
+```bash
+sudo apt install python3-rpm
+```
+
 ## Usage
 
-To use the package comparison tool, run the following command in your terminal:
+To use the package comparison tool, go to the `package_comparator` folder and run the following command in a terminal:
 ```bash
+cd package_comparator
 python cli.py <branch1> <branch2>
 ```
 
