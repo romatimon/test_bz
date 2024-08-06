@@ -38,7 +38,7 @@ pip install -r requirements.txt
 ## Usage
 To use the package comparison tool, run the following command in your terminal:
 ```bash
-python package_comparison.py <branch1> <branch2>
+python cli.py <branch1> <branch2>
 ```
 
 - `<branch1>`: The first branch to compare.
@@ -47,7 +47,7 @@ python package_comparison.py <branch1> <branch2>
 ## Example
 
 ```bash
-python package_comparison.py sisyphus p10
+python cli.py sisyphus p10
 ```
 
 ## Output
