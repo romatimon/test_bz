@@ -1,6 +1,5 @@
 import requests
 
-
 def get_packages(url: str) -> list:
     """Fetch packages from the specified URL."""
     try:
