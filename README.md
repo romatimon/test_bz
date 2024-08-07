@@ -20,12 +20,12 @@ cd test_bz
 ```
 **2. Update package lists:**
 ```bash
-sudo apt update
+sudo apt-get update
 ```
 
 **3. Install Python 3 and pip (if not already installed):**
 ```bash
-sudo apt install python3-pip
+sudo apt-get install pip
 ```
 
 **4. Install required libraries:**

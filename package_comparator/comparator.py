@@ -1,5 +1,4 @@
 import requests
-import rpm
 
 
 def get_packages(url: str) -> list:
@@ -16,17 +15,19 @@ def get_packages(url: str) -> list:
 
     return packages
 
+
 def parse_version(version):
     """Parses a version string and returns a tuple for comparison."""
-    version = version.replace('_', '-')  #  1.26.0_alt1 convert to 1.26.0-alt1
+    version = version.replace('_', '-')  # 1.26.0_alt1 convert to 1.26.0-alt1
     if '-' in version:
-        base_version, release = version.split('-', 1)  #  base_version = 1.26.0, release = alt1
+        base_version, release = version.split('-', 1)  # base_version = 1.26.0, release = alt1
     else:
         base_version, release = version, ''
 
-    parts = base_version.split('.')  #  1.26.0 convert to ['1', '26', '0']
+    parts = base_version.split('.')  # 1.26.0 convert to ['1', '26', '0']
 
     return [int(part) if part.isdigit() else part for part in parts], release
+
 
 def compare_versions(pkg1, pkg2):
     """Compares two package versions without external libraries."""
@@ -56,6 +57,7 @@ def compare_versions(pkg1, pkg2):
                 return -1
 
     return (release1 > release2) - (release1 < release2)  # bool
+
 
 def compare_packages(branch1_packages: list, branch2_packages: list) -> dict:
     """Compare packages between two branches and return the results."""
